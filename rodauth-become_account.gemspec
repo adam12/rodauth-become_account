@@ -17,4 +17,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rubygems-tasks", "~> 0.2"
   spec.add_development_dependency "rack-test", "~> 0.6"
+  spec.add_development_dependency "tilt", "~> 2.0"
+  spec.add_development_dependency "rack_csrf"
+  spec.add_development_dependency "bcrypt"
+  spec.add_development_dependency "sequel"
+  spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "capybara"
 end
