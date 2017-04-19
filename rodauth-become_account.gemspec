@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name           = "rodauth-become_account"
-  spec.version        = "0.2.0"
+  spec.version        = "0.2.1"
   spec.authors        = ["Adam Daniels"]
   spec.email          = "adam@mediadrive.ca"
 
