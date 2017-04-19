@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
 
   spec.platform = Gem::Platform::CURRENT
 
-  spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "jdbc-sqlite3"
 end
