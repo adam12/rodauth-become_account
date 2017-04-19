@@ -23,5 +23,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "sequel"
   spec.add_development_dependency "capybara"
 
-  spec.add_development_dependency "sqlite3"
+  if RUBY_PLATFORM =~ /java/
+    spec.platform = "jruby"
+    spec.add_development_dependency "jdbc-sqlite3"
+  else
+    spec.add_development_dependency "sqlite3"
+  end
 end
