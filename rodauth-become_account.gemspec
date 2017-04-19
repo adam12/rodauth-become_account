@@ -21,6 +21,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rack_csrf"
   spec.add_development_dependency "bcrypt"
   spec.add_development_dependency "sequel"
-  spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "capybara"
+
+  if RUBY_PLATFORM =~ /java/
+    spec.add_development_dependency "jdbc-sqlite3"
+  else
+    spec.add_development_dependency "sqlite3"
+  end
 end

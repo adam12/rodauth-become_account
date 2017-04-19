@@ -4,7 +4,11 @@ require "roda"
 require "sequel"
 require "capybara/minitest"
 
-DB = Sequel.sqlite
+if RUBY_PLATFORM =~ /java/
+  DB = Sequel.connect("jdbc:sqlite::memory:")
+else
+  DB = Sequel.sqlite
+end
 
 DB.create_table(:account_statuses) do
   Integer :id, primary_key: true
