@@ -46,10 +46,23 @@ class App < Roda
 
   route do |r|
     r.is "become", :id do |id|
-      # Perform your account lookup
+      # Authenticate the request to allow this action.
+      #
+      # Can be done multiple ways. For this example, we're just going to allow
+      # all become_account actions if running in development mode.
+      #
+      # You want to ensure you protect this route somehow.
+      if ENV["RACK_ENV"] != "development"
+        r.halt([401, { "Content-Type" => "text/html" }, ["Access denied"]])
+      end
+
+      # Perform your account lookup.
       account = DB[:accounts][id: id.to_i]
-      # Optionally
+
+      # Optional.
       flash[:notice] = "You've successfully became #{account[:email]}"
+
+      # Switch accounts using the become_account feature.
       rodauth.become_account(account)
     end
   end
