@@ -1,0 +1,44 @@
+# vim:ts=2:sts=2:sw=2:et:
+---
+version: 2.0
+
+jobs:
+  "ruby-2.4":
+    docker:
+      - image: circleci/ruby:2.4
+    steps:
+      - checkout
+      - run: gem install bundler -v 1.13 --no-document
+      - run: bundle install --path vendor/bundle
+      - run:
+          name: Run tests
+          command: bundle exec rake test
+
+  "ruby-2.5":
+    docker:
+      - image: circleci/ruby:2.5
+    steps:
+      - checkout
+      - run: gem install bundler -v 1.13 --no-document
+      - run: bundle install --path vendor/bundle
+      - run:
+          name: Run tests
+          command: bundle exec rake test
+
+  "ruby-2.6":
+    docker:
+      - image: circleci/ruby:2.6
+    steps:
+      - checkout
+      - run: bundle install --path vendor/bundle
+      - run:
+          name: Run tests
+          command: bundle exec rake test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - "ruby-2.4"
+      - "ruby-2.5"
+      - "ruby-2.6"
