@@ -11,5 +11,5 @@ Gem::Specification.new do |spec|
   spec.files          = ["README.md"] + Dir["lib/**/*.rb"]
   spec.require_paths  = ["lib"]
 
-  spec.add_dependency "rodauth", "~> 1.10"
+  spec.add_runtime_dependency "rodauth", ">= 1.10", "< 3"
 end
