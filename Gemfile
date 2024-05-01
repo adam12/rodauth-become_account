@@ -5,7 +5,6 @@ gemspec
 gem "roda", "~> 3.0"
 gem "minitest", "~> 5.0"
 gem "rake"
-gem "rubygems-tasks", "~> 0.2"
 gem "rack-session"
 gem "rack-test", "~> 0.6"
 gem "tilt", "~> 2.0"

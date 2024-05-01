@@ -1,6 +1,6 @@
 require "rake/testtask"
 require "rdoc/task"
-require "rubygems/tasks"
+require "bundler/gem_tasks"
 
 RDoc::Task.new do |rdoc|
   rdoc.main = "README.md"
@@ -12,7 +12,5 @@ Rake::TestTask.new do |t|
   t.test_files = FileList["test/test*.rb"]
   t.verbose = true
 end
-
-Gem::Tasks.new
 
 task default: :test
