@@ -18,6 +18,7 @@ jobs:
           - "3.3"
         gemfile:
           - Gemfile
+          - gemfiles/rodauth-1.rb
           - gemfiles/rodauth-2.rb
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
