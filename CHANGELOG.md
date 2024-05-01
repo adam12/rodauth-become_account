@@ -1,5 +1,6 @@
 # master
 
+# 0.3.0 (05-01-2024)
 - Loosen version constraint around Rodauth dependency
 
 # 0.2.1 (04-18-2017)
