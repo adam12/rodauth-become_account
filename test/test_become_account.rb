@@ -1,5 +1,6 @@
 require "minitest/autorun"
 require "rack/test"
+require "rack/session"
 require "roda"
 require "sequel"
 require "capybara/minitest"
