@@ -36,7 +36,7 @@ class TestBecomeAccount < Minitest::Test
 
   def app
     Class.new(Roda) do
-      use Rack::Session::Cookie, :secret => "THE-SECRET"
+      use Rack::Session::Cookie, :secret => ("THE-SECRET-" + "a" * 54)
 
       plugin :rodauth do
         enable :become_account
