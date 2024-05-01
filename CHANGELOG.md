@@ -1,6 +1,6 @@
 # master
 
-no change
+- Loosen version constraint around Rodauth dependency
 
 # 0.2.1 (04-18-2017)
 - Version bump due to release mixup
