@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
+gem "base64"
 gem "roda", "~> 3.0"
 gem "minitest", "~> 5.0"
 gem "rake"
