@@ -13,6 +13,8 @@ gem "rack_csrf"
 gem "bcrypt"
 gem "sequel"
 gem "capybara"
+gem "rdoc"
+gem "cgi"
 
 gem "sqlite3", platforms: :mri
 gem "jdbc-sqlite3", platforms: :jruby
